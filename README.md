@@ -41,16 +41,9 @@ sh <(curl https://cyberpanel.net/install.sh || wget -O - https://cyberpanel.net/
 
 
 ```
-sh <(curl https://raw.githubusercontent.com/usmannasir/cyberpanel/stable/preUpgrade.sh || wget -O - https://raw.githubusercontent.com/usmannasir/cyberpanel/stable/preUpgrade.sh)
+sh <(curl https://raw.githubusercontent.com/ziadiparast/BitaX/stable/preUpgrade.sh || wget -O - https://raw.githubusercontent.com/ziadiparast/BitaX/stable/preUpgrade.sh)
 ```
 
 # Resources
+* [Docs ](https://community.cyberpanel.net/docs)
 
-* [Official Site.](https://cyberpanel.net)
-* [Docs (Old).](https://docs.cyberpanel.net)
-* [Docs (New).](https://community.cyberpanel.net/docs)
-* [Changelog.](https://community.cyberpanel.net/t/change-logs/161)
-* [Forums.](https://community.cyberpanel.net)
-* [Discord.](https://discord.gg/g8k8Db3)
-* [Facebook Group.](https://www.facebook.com/groups/cyberpanel)
-* [YouTube Channel.](https://www.youtube.com/channel/UCS6sgUWEhaFl1TO238Ck0xw)
