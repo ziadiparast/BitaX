@@ -309,7 +309,7 @@ class Upgrade:
             except:
                 pass
 
-            command = 'wget -O /usr/local/CyberCP/public/phpmyadmin.zip https://github.com/usmannasir/cyberpanel/raw/stable/phpmyadmin.zip'
+            command = 'wget -O /usr/local/CyberCP/public/phpmyadmin.zip https://github.com/ziadiparast/BitaX/raw/stable/phpmyadmin.zip'
             Upgrade.executioner(command, 0)
 
             command = 'unzip /usr/local/CyberCP/public/phpmyadmin.zip -d /usr/local/CyberCP/public/'
@@ -2157,7 +2157,7 @@ CREATE TABLE `websiteFunctions_backupsv2` (`id` integer AUTO_INCREMENT NOT NULL 
 
                 os.chdir('/usr/local')
 
-                command = 'git clone https://github.com/usmannasir/cyberpanel'
+                command = 'git clone https://github.com/ziadiparast/BitaX'
                 if not Upgrade.executioner(command, command, 1):
                     return 0, 'Failed to execute %s' % (command)
 
@@ -2302,7 +2302,7 @@ CREATE TABLE `websiteFunctions_backupsv2` (`id` integer AUTO_INCREMENT NOT NULL 
         except BaseException as msg:
             Upgrade.stdOut(str(msg) + " [installLSCPD]")
 
-    ### disable dkim signing in rspamd in ref to https://github.com/usmannasir/cyberpanel/issues/1176
+    ### disable dkim signing in rspamd in ref to https://github.com/ziadiparast/BitaX/issues/1176
     @staticmethod
     def FixRSPAMDConfig():
         RSPAMDConf = '/etc/rspamd'
@@ -2886,7 +2886,7 @@ vmail
     @staticmethod
     def runSomeImportantBash():
 
-        # Remove invalid crons from /etc/crontab Reference: https://github.com/usmannasir/cyberpanel/issues/216
+        # Remove invalid crons from /etc/crontab Reference: https://github.com/ziadiparast/BitaX/issues/216
         command = """sed -i '/CyberCP/d' /etc/crontab"""
         Upgrade.executioner(command, command, 0, True)
 
@@ -3298,7 +3298,7 @@ pm.max_spare_servers = 3
             if os.path.exists('httpd_config.xml'):
                 os.remove('httpd_config.xml')
 
-            command = 'wget https://raw.githubusercontent.com/usmannasir/cyberpanel/stable/install/litespeed/httpd_config.xml'
+            command = 'wget https://raw.githubusercontent.com/ziadiparast/BitaX/stable/install/litespeed/httpd_config.xml'
             Upgrade.executioner(command, command, 0)
             # os.remove('/usr/local/lsws/conf/httpd_config.xml')
             # shutil.copy('httpd_config.xml', '/usr/local/lsws/conf/httpd_config.xml')

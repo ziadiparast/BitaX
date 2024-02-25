@@ -100,7 +100,7 @@ class backupUtilities:
             child = SubElement(metaFileXML, 'BUILD')
             child.text = str(BUILD)
 
-            ### try to take care of - https://github.com/usmannasir/cyberpanel/issues/1196
+            ### try to take care of - https://github.com/ziadiparast/BitaX/issues/1196
 
             child = SubElement(metaFileXML, 'BackupWholeDir')
             child.text = str(1)
@@ -378,7 +378,7 @@ class backupUtilities:
 
             #copytree('/home/%s/public_html' % domainName, '%s/%s' % (tempStoragePath, 'public_html'))
             #command = f'cp -R /home/{domainName}/public_html {tempStoragePath}/public_html'
-            ### doing backup of whole dir and keeping it in public_html folder will restore from here - ref https://github.com/usmannasir/cyberpanel/issues/1196
+            ### doing backup of whole dir and keeping it in public_html folder will restore from here - ref https://github.com/ziadiparast/BitaX/issues/1196
             command = f"rsync -av --exclude=.wp-cli --exclude=logs --exclude=backup --exclude=lscache /home/{domainName}/ {tempStoragePath}/public_html/"
 
             if ProcessUtilities.normalExecutioner(command) == 0:
