@@ -34,7 +34,7 @@ Web Hosting Control Panel that uses OpenLiteSpeed as the underlying Web Server.
 
 
 ```
-sh <(curl https://cyberpanel.net/install.sh || wget -O - https://cyberpanel.net/install.sh)
+sh <(curl https://raw.githubusercontent.com/ziadiparast/BitaX/stable/install.sh || wget -O - https://raw.githubusercontent.com/ziadiparast/BitaX/stable/install.sh)
 ```
 
 # Upgrading CyberPanel
